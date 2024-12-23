@@ -17,7 +17,6 @@ defmt = []
 embedded-hal = "1.0"
 defmt = "0.3.0"
 defmt-rtt = "0.3.0"
-panic-probe = { version = "0.3.0", features = ["print-defmt"] }
 bitfield = "0.16"
 strum = { version = "0.26", default-features = false, features = ["derive"] }
 heapless = "0.8"
@@ -27,7 +26,7 @@ cortex-m-rtic = "1.1"
 systick-monotonic = "1.0.0"
 cortex-m-rt = "0.7.0"
 cortex-m = "0.7"
-
+panic-probe = { version = "0.3.0", features = ["print-defmt"] }
 
 
 [dev-dependencies.stm32h7xx-hal]
@@ -40,8 +39,8 @@ codegen-units = 1
 debug = 2
 debug-assertions = true # <-
 incremental = false
-opt-level = "s" # <-
-overflow-checks = true # <-
+opt-level = "s"         # <-
+overflow-checks = true  # <-
 
 # cargo test
 [profile.test]
@@ -49,8 +48,8 @@ codegen-units = 1
 debug = 2
 debug-assertions = true # <-
 incremental = false
-opt-level = "s" # <-
-overflow-checks = true # <-
+opt-level = "s"         # <-
+overflow-checks = true  # <-
 
 # cargo build/run --release
 [profile.release]
@@ -59,8 +58,8 @@ debug = 2
 debug-assertions = false # <-
 incremental = false
 lto = 'fat'
-opt-level = "s" # <-
-overflow-checks = false # <-
+opt-level = "s"          # <-
+overflow-checks = false  # <-
 
 # cargo test --release
 [profile.bench]
@@ -69,5 +68,5 @@ debug = 2
 debug-assertions = false # <-
 incremental = false
 lto = 'fat'
-opt-level = "s" # <-
-overflow-checks = false # <-
+opt-level = "s"          # <-
+overflow-checks = false  # <-
